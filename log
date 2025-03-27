@@ -124,3 +124,17 @@ Thu, Mar 27, 2025  6:08:20 PM:
  tests:  9|3
 total_score: 35/70
 1fbbf44
+Thu, Mar 27, 2025  6:11:28 PM: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function 'pushFront':
+list.c:67:35: error: 'return' with a value, in function returning void [-Werror]
+     if(list->head == NULL) return NULL;
+                                   ^~~~
+list.c:65:6: note: declared here
+ void pushFront(List * list, void * data) {
+      ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4748573
