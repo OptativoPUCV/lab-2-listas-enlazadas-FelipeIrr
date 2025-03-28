@@ -227,3 +227,8 @@ list.c:83:11: error: unused variable 'nodo' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 e9e181c
+Fri, Mar 28, 2025  7:54:39 PM: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+ tests:  0|0
+8856972
