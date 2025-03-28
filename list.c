@@ -102,6 +102,16 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
     Node* tempIzq = list->current->prev;
     Node* tempDer = list->current->next;
+    if(tempIzq == NULL) {
+        list->head = tempDer;
+    } else {
+        tempIzq->next = tempDer;
+    }
+    if(tempDer == NULL) {
+        list->tail = tempIzq;
+    } else {
+        tempDer->prev = tempIzq;
+    }
     tempIzq->next = tempDer;
     tempDer->prev = tempIzq;
     free(list->current);
