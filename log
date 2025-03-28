@@ -301,3 +301,9 @@ Fri, Mar 28, 2025  8:19:17 PM:
  1 file changed, 10 insertions(+)
  tests:  0|0
 f42fde9
+Fri, Mar 28, 2025  8:20:10 PM: 
+ list.c | 12 ++----------
+ 1 file changed, 2 insertions(+), 10 deletions(-)
+ tests:  11|1
+total_score: 55/70
+fd6a68d
