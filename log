@@ -216,3 +216,14 @@ list.c:82:6: note: declared here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 37522a8
+Fri, Mar 28, 2025  7:52:43 PM: 
+ list.c | 11 -----------
+ 1 file changed, 11 deletions(-)
+In file included from test.c:5:0:
+list.c: In function 'pushCurrent':
+list.c:83:11: error: unused variable 'nodo' [-Werror=unused-variable]
+     Node* nodo = createNode(data);
+           ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+e9e181c
