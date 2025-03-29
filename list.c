@@ -116,7 +116,7 @@ void * popCurrent(List * list) {
     } else if (list->current == list->tail) {
         list->tail = tempIzq;
     }
-    return NULL;
+    return list;
 }
 
 void cleanList(List * list) {
