@@ -104,9 +104,12 @@ void * popCurrent(List * list) {
     Node* tempDer = list->current->next;
     if(tempIzq == NULL) return NULL;
     if(tempDer == NULL) return NULL;
+    Node* temp = list->current;
+    free(list->current);
+    list->current = tempDer;
     tempIzq->next = tempDer;
     tempDer->prev = tempIzq;
-    return list->current->data;
+    return temp->data;
 }
 
 void cleanList(List * list) {
