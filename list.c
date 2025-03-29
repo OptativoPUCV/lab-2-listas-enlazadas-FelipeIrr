@@ -100,6 +100,7 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+    if(list->current == NULL) return NULL;
     Node* tempIzq = list->current->prev;
     Node* tempDer = list->current->next;
     if(tempIzq == NULL) return NULL;
