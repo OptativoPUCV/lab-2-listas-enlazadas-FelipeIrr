@@ -447,3 +447,9 @@ list.c:103:11: error: 'popCurrent' defined but not used [-Werror=unused-function
 cc1.exe: all warnings being treated as errors
 Compilation failed
 7634c1c
+Fri, Mar 28, 2025 11:06:23 PM: 
+ list.c | 42 ++++++++++--------------------------------
+ 1 file changed, 10 insertions(+), 32 deletions(-)
+ tests:  11|1
+total_score: 55/70
+7f4c9c5

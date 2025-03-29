@@ -100,39 +100,17 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    void* popCurrent(List* list) {
-    if (list == NULL || list->current == NULL) {
-        // Si la lista o el nodo actual es NULL, no hay nada que eliminar
-        return NULL;
-    }
-
+    if(list->current == NULL) return NULL;
+    Node* tempIzq = list->current->prev;
+    Node* tempDer = list->current->next;
+    if(tempIzq == NULL) return NULL;
+    if(tempDer == NULL) return NULL;
     Node* temp = list->current;
-    void* data = temp->data; // Guardamos el dato para devolverlo
-
-    // Actualizamos los punteros de los nodos vecinos
-    if (temp->prev != NULL) {
-        temp->prev->next = temp->next;
-    } else {
-        // Si no hay nodo anterior, significa que el nodo actual es el primero
-        list->head = temp->next;
-    }
-
-    if (temp->next != NULL) {
-        temp->next->prev = temp->prev;
-    } else {
-        // Si no hay nodo siguiente, significa que el nodo actual es el último
-        list->tail = temp->prev;
-    }
-
-    // Movemos el current al siguiente nodo
-    list->current = temp->next;
-
-    // Liberamos la memoria del nodo eliminado
-    free(temp);
-
-    return data;
-}
-
+    free(list->current);
+    list->current = tempDer;
+    tempIzq->next = tempDer;
+    tempDer->prev = tempIzq;
+    return temp->data;
 }
 
 void cleanList(List * list) {
