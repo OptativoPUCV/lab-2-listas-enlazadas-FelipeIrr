@@ -104,7 +104,7 @@ void * popCurrent(List * list) {
     Node* tempDer = list->current->next;
     if(tempIzq == NULL) return NULL;
     if(tempDer == NULL) return NULL;
-    if(list->head == NULL) list->head = tempDer;
+    if(list->head == NULL) list->head = tempIzq;
     tempIzq->next = tempDer;
     tempDer->prev = tempIzq;
     return list->current->data;
