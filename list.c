@@ -116,9 +116,6 @@ void * popCurrent(List * list) {
     } else if (list->current == list->tail) {
         list->tail = tempIzq;
     }
-    if (list->current == NULL) {
-        list->current = list->head;
-    }
     return NULL;
 }
 
